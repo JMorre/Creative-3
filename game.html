@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <title>Cliche Gladiator Game</title>
+</head>
+
+<body class="game">
+  <h1>GLADIATOR</h1>
+    <div id="game">
+
+      <h2 class="player">YOU</h2>
+      <h2 class="opponent">ENEMY</h2>
+
+      <p>
+        <div v-if="started === false"><button class="play" @click="play" :disabled="active === true" :disabled="end === true">Start</button></div>
+        <div v-else><button class="play" @click="play" :disabled="active === true" :disabled="end === true">Continue</button></div>
+        <button class="playerAttack" @click="playerAttack" :disabled="active === false" :disabled="end === true">Attack</button>
+        <button class="playerRest" @click="playerRest" :disabled="active === false" :disabled="end === true">Rest</button>
+        <button class="playerEvade" @click="playerEvade" :disabled="active === false" :disabled="end === true">Evade</button>
+      </p>
+
+      <div class="statsbar player">
+        <p>Level: {{player.level}}</p>
+        <p>Strength: {{player.stats.strength}}</p>
+        <p>Agility: {{player.stats.currentAgility | round(1)}}/{{player.stats.agility}}</p>
+        <p>Speed: {{player.stats.speed}}</p>
+      </div>
+
+      <div class="vitals player">
+        <p>Health: {{player.health | round(1)}}/{{player.maxHealth | round(1)}}</p>
+        <p>Stamina: {{player.stamina | round(1)}}/{{player.maxStamina | round(1)}}</p>
+      </div>
+
+      <div class="statsbar opponent">
+        <p>Level: {{opponent.level}}</p>
+        <p>Strength: {{opponent.stats.strength}}</p>
+        <p>Agility: {{opponent.stats.currentAgility | round(1)}}/{{opponent.stats.agility}}</p>
+        <p>Speed: {{opponent.stats.speed}}</p>
+      </div>
+
+      <div class="vitals opponent">
+        <p>Health: {{opponent.health | round(1)}}/{{opponent.maxHealth | round(1)}}</p>
+        <p>Stamina: {{opponent.stamina | round(1)}}/{{opponent.maxStamina | round(1)}}</p>
+      </div>
+
+      <div class="message player">{{playerMessage}}</div>
+      <div class="message opponent">{{opponentMessage}}</div>
+
+    </div>
+
+    <div class="buffer">
+      <p></p>
+    </div>
+    <a class="footer" href="https://github.com/JMorre/Creative-3">GitHub Repository</a>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

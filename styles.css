@@ -1,0 +1,152 @@
+html {
+  height: 100%;
+}
+
+h1, h2, p, div.message {
+  color: #eaddc0;
+}
+
+button {
+  background-color: #B5AEA0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+body a.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 16px;
+  text-decoration: none;
+  background-color: #8D8B88;
+  color: #efefef;
+  font-size: 14px;
+  font-family: calibri;
+}
+
+body.game {
+  background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url("Coliseum.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  margin-top: 30px;
+}
+
+div.buffer p {
+  margin-bottom: 100px;
+}
+
+button {
+  font-family: 'Cinzel', serif;
+}
+
+button.playerAttack {
+  position: fixed;
+  display: block;
+  bottom: 150px;
+  left: 35%;
+  margin: auto;
+}
+
+button.play {
+  position: relative;
+  display: block;
+  top: 5vh;
+  margin: auto;
+}
+
+button.playerRest {
+  position: fixed;
+  display: block;
+  bottom: 150px;
+  left: 45%;
+  margin: auto;
+}
+
+button.playerEvade {
+  position: fixed;
+  display: block;
+  bottom: 150px;
+  left: 25%;
+  margin: auto;
+}
+
+div.statsbar.player {
+  position: fixed;
+  left: 5%;
+  top: 120px;
+}
+
+div.statsbar.opponent {
+  position: fixed;
+  right: 5%;
+  top: 120px;
+}
+
+div.vitals.player {
+  position: fixed;
+  left: 5%;
+  bottom: 120px;
+}
+
+div.vitals.opponent {
+  position: fixed;
+  right: 5%;
+  bottom: 120px;
+}
+
+h2.player {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  position: fixed;
+  left: 5%;
+  top: 25px;
+}
+
+h2.opponent {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  position: fixed;
+  right: 5%;
+  top: 25px;
+}
+
+div.message.player {
+  position: fixed;
+  text-align: center;
+  font-size: 1.5em;
+  top: 60px;
+  left: 25%;
+}
+
+div.message.opponent {
+  position: fixed;
+  text-align: center;
+  font-size: 1.5em;
+  top: 60px;
+  right: 25%;
+}
+
+p.intro {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+
+form.intro input {
+  background-color: #B5AEA0;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  display: block;
+  top: 5vh;
+  margin: auto;
+}
